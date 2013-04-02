@@ -24,7 +24,7 @@ LOCAL_C_INCLUDES += $(JNI_H_INCLUDE) \
 
 LOCAL_CFLAGS += 
 
-ifeq ($(BOARD_HAVE_BLUETOOTH),true)
+ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
 LOCAL_C_INCLUDES += \
     system/bluetooth/bluez-clean-headers \
     system/bluetooth/bluedroid/include \
