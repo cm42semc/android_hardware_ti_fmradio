@@ -117,7 +117,7 @@ public class FmRxApp extends Activity implements View.OnClickListener,
      * ******************************************
      */
 
-    private ImageView imgFmMode, imgFmVolume, imgFmLoudspeaker;
+    private ImageView imgFmMode, imgFmVolume;//, imgFmLoudspeaker;
     private TextView txtStatusMsg, txtRadioText;
     private TextView txtPsText;
     private ProgressDialog pd = null, configPd;
@@ -1161,14 +1161,14 @@ public class FmRxApp extends Activity implements View.OnClickListener,
             imgFmVolume.setImageResource(R.drawable.fm_volume);
         }
 
-        imgFmLoudspeaker = (ImageView) findViewById(R.id.imgLoudspeaker);
+        /*imgFmLoudspeaker = (ImageView) findViewById(R.id.imgLoudspeaker);
         imgFmLoudspeaker.setOnClickListener(this);
         AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         if (audioManager.isSpeakerphoneOn()) {
             imgFmLoudspeaker.setImageResource(R.drawable.fm_loudspeaker);
         } else {
             imgFmLoudspeaker.setImageResource(R.drawable.fm_loudspeaker_off);
-        }
+        } */
 
 
         ImageButton imageButtonAux = (ImageButton) findViewById(R.id.imgseekup);
@@ -1500,7 +1500,7 @@ public class FmRxApp extends Activity implements View.OnClickListener,
                 seekDown();
                 break;
 
-            case R.id.imgLoudspeaker:
+            /*case R.id.imgLoudspeaker:
                 AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
                 if (audioManager.isSpeakerphoneOn()) {
                     audioManager.setSpeakerphoneOn(false);
@@ -1513,7 +1513,7 @@ public class FmRxApp extends Activity implements View.OnClickListener,
                     audioManager.setParameters("fm_radio_speaker=on");
                     imgFmLoudspeaker.setImageResource(R.drawable.fm_loudspeaker);
                 }
-                break;
+                break; */
 
             case R.id.imgseekup:
                 seekUp();
